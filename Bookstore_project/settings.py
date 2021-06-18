@@ -37,6 +37,9 @@ INSTALLED_APPS = [
     'django.contrib.sessions',
     'django.contrib.messages',
     'django.contrib.staticfiles',
+
+    #my local apps
+    'pages.apps.PagesConfig',
 ]
 
 MIDDLEWARE = [
@@ -54,7 +57,7 @@ ROOT_URLCONF = 'Bookstore_project.urls'
 TEMPLATES = [
     {
         'BACKEND': 'django.template.backends.django.DjangoTemplates',
-        'DIRS': [],
+        'DIRS': [os.path.join(BASE_DIR,'templates')],
         'APP_DIRS': True,
         'OPTIONS': {
             'context_processors': [
@@ -80,15 +83,16 @@ WSGI_APPLICATION = 'Bookstore_project.wsgi.application'
     #}
 #}
 
-DATABASES = {
-'default': {
-'ENGINE': 'django.db.backends.postgresql_psycopg2',
-'NAME': 'simpledb',
-'USER': 'postgres',
-'PASSWORD': 'bapi1234',
-'HOST': 'localhost',
-'PORT': '',
-}
+DATABASES =  {
+    'default': 
+    {
+        'ENGINE': 'django.db.backends.postgresql_psycopg2',
+        'NAME': 'simpledb',
+        'USER': 'postgres',
+        'PASSWORD': 'bapi1234',
+        'HOST': 'localhost',
+        'PORT': '',
+    }
 }
 
 
