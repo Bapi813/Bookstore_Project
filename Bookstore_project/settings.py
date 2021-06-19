@@ -39,7 +39,9 @@ INSTALLED_APPS = [
     'django.contrib.staticfiles',
 
     #my local apps
+    'users.apps.UsersConfig',
     'pages.apps.PagesConfig',
+    
 ]
 
 MIDDLEWARE = [
@@ -133,3 +135,8 @@ USE_TZ = True
 # https://docs.djangoproject.com/en/2.2/howto/static-files/
 
 STATIC_URL = '/static/'
+
+
+
+#Custome user Model
+AUTH_USER_MODEL = 'users.CustomUser'
