@@ -140,3 +140,8 @@ STATIC_URL = '/static/'
 
 #Custome user Model
 AUTH_USER_MODEL = 'users.CustomUser'
+
+#login/logout redirects
+
+LOGIN_REDIRECT_URL='home'
+LOGOUT_REDIRECT_URL='home'
