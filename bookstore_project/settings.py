@@ -49,6 +49,7 @@ INSTALLED_APPS = [
     #my local app
     'users.apps.UsersConfig',
     'pages.apps.PagesConfig',
+    'books.apps.BooksConfig',
 ]
 
 MIDDLEWARE = [
@@ -89,7 +90,7 @@ WSGI_APPLICATION = 'bookstore_project.wsgi.application'
  #   'default': {
   #      'ENGINE': 'django.db.backends.sqlite3',
    #     'NAME': os.path.join(BASE_DIR, 'db.sqlite3'),
-   # }
+    #}
 #}
 DATABASES = {
     'default': {
@@ -182,8 +183,10 @@ EMAIL_BACKEND = 'django.core.mail.backends.smtp.EmailBackend'
 #EMAIL_HOST_USER = 'postmaster@sandboxcffb6302a9e542cdba2cfc11b10d4450.mailgun.org'
 #EMAIL_HOST_PASSWORD = '976cffde472f2c5f08ca106f26262466-1d8af1f4-6f85cf90'
 EMAIL_HOST = 'smtp.gmail.com'
-EMAIL_HOST_USER = '(write your own gmail here)'
-EMAIL_HOST_PASSWORD = '(write your own gmail smtp password here)'
+#EMAIL_HOST_USER = '(write your own gmail here)'
+#EMAIL_HOST_PASSWORD = '(write your own gmail smtp password here)'
+EMAIL_HOST_USER = 'bapimahalik51@gmail.com'
+EMAIL_HOST_PASSWORD = 'hztemklbtwkvytfv'
 EMAIL_USE_SSL=False
 EMAIL_PORT = 587
 EMAIL_USE_TLS = True
