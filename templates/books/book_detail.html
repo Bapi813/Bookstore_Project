@@ -2,10 +2,17 @@
 {% block title %}{{ object.title }}{% endblock title %}
 
 {% block content %}
-	<div class="book-details">
+	<div class="book-detail">
 		<h2><a href="">{{object.title}}</a></h2>
 		<p>Author: {{object.author}}</p>
 		<p>Price: {{object.price}}</p>
-		
+		<div>
+			<h3>Review</h3>
+			<ul>
+			{% for review in book.reviews.all %}
+				<li>{{ review.review}} ({{ review.author }})</li>
+			{% endfor %}
+			</ul>
+		</div>
 	</div>
 {% endblock content %}
